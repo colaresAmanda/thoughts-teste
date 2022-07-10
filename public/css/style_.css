@@ -98,8 +98,8 @@ body {
 }
 
 .move-arrow #arrow-icon {
-  margin: auto;
-  position: absolute;
+  position: fixed;
+
   top: .5rem;
 
 
@@ -132,11 +132,11 @@ body {
 }
 
 .navbar .menu-brand .brand-icon {
-  width: 2rem;
+  width: 1.5rem;
 }
 
 .navbar .menu-brand .brand-text {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   padding-left: 1rem;
   color: var(--text-primary);
