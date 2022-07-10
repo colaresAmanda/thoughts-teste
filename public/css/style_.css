@@ -71,7 +71,7 @@ body {
 #arrow-icon {
   margin: auto;
   position: absolute;
-  top: 1rem;
+  top: .5rem;
 
   left: 1rem;
   right: auto;
@@ -100,7 +100,8 @@ body {
 .move-arrow #arrow-icon {
   margin: auto;
   position: absolute;
-  top: 1rem;
+  top: .5rem;
+
 
   left: -webkit-calc(100% - 4rem);
   left: -moz-calc(100% - 4rem);
@@ -131,11 +132,11 @@ body {
 }
 
 .navbar .menu-brand .brand-icon {
-  width: 3rem;
+  width: 2rem;
 }
 
 .navbar .menu-brand .brand-text {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   padding-left: 1rem;
   color: var(--text-primary);
@@ -150,6 +151,8 @@ body {
 }
 .navbar .menu-item a {
   display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 2rem 2rem;
 
   border-radius: 1rem;
@@ -165,7 +168,7 @@ body {
 
 .navbar .menu-item .item-icon,
 .navbar .menu-item .item-text {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: var(--text-primary);
 }
 
@@ -176,6 +179,8 @@ body {
 .navbar .menu-item:last-child {
   position: absolute;
   display: flex;
+  align-items: center;
+  justify-content: center;
   bottom: 0;
 
   /* visibility: hidden; */
