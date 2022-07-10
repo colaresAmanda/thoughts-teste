@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  /* border: 0; */
+  padding: 0;
+
+  list-style: none;
+  text-decoration: none;
+}
+:root {
+  --bg-primary: #313536;
+  --bg-secondary: #252829;
+
+  --text-primary: #f2f2f2;
+  --text-secondary: #abaeb0;
+
+  --color-brand-primary: #9172a6;
+  --color-brand-secondary: #9780a6;
+  --color-brand-tertiary: #b5a4bf;
+
+  --color-brand-highlight: #acdef2;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+
+  width: 100%;
+  height: 100vh;
+}
+
+.navbar {
+  position: fixed;
+  width: 0;
+  height: 100vh;
+  outline: 5px solid #17191a;
+
+  background-color: var(--bg-secondary);
+  visibility: hidden;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  z-index: 100;
+
+  
+}
+
+.active {
+  visibility: visible;
+  width: 100%;
+  z-index: 125;
+  background-color: var(--bg-secondary);
+}
+
+.arrow {
+  border: solid #f2f2f2;
+  border-width: 0 0.25rem 0.25rem 0;
+  display: inline-block;
+  padding: 0.35rem;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+#arrow-icon {
+  margin: auto;
+  position: absolute;
+  top: 1rem;
+
+  left: 1rem;
+  right: auto;
+  transition: all 0.5s ease;
+
+
+  
+  background-color: var(--bg-primary);
+  -webkit-box-shadow: 0px 0px 5px 3px #202324; 
+  box-shadow: 0px 0px 5px 3px #202324;
+  border-radius: .5rem;
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  z-index: 999;
+
+}
+/* 
+#arrow-icon i::before {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: #17191a;
+  content: '';
+
+  left: .5rem;
+  top: 0rem;
+
+  transform: rotate(135deg);
+  z-index: 10;
+  
+} */
+
+
+.move-arrow #arrow-icon {
+  margin: auto;
+  position: absolute;
+  top: 1rem;
+
+  left: -webkit-calc(100% - 4rem);
+  left: -moz-calc(100% - 4rem);
+  left: calc(100% - 4rem);
+
+  transition: all 0.5s ease;
+
+  z-index: 999;
+
+
+}
+
+.move-arrow #arrow-icon i{
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+}
+
+.navbar .menu-brand {
+  padding: 1rem 2rem;
+  background-color: var(--bg-primary);
+
+}
+.navbar .menu-brand a {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-primary);
+
+}
+
+.navbar .menu-brand .brand-icon {
+  width: 3rem;
+}
+
+.navbar .menu-brand .brand-text {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-left: 1rem;
+  color: var(--text-primary);
+}
+
+.navbar .menu-item {
+  padding: 1rem 2rem;
+  /* display: flex; */
+  transition: all 0.5s ease;
+  overflow: hidden;
+  /* position: relative; */
+}
+.navbar .menu-item a {
+  display: flex;
+  padding: 2rem 2rem;
+
+  border-radius: 1rem;
+
+  /* transition: all .2s ease; */
+  overflow: hidden;
+}
+
+.navbar .menu-item a:hover {
+  cursor: pointer;
+  background-color: var(--bg-primary);
+}
+
+.navbar .menu-item .item-icon,
+.navbar .menu-item .item-text {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+
+.navbar .menu-item .item-icon {
+  padding-right: 1rem;
+}
+
+.navbar .menu-item:last-child {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+
+  /* visibility: hidden; */
+  width: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.active .menu-item:last-child {
+  visibility: visible;
+  width: calc(100% - 4rem);
+
+  border-top: 2px solid #313536;
+
+  /* background-color: var(--bg-secondary); */
+}
+
+.navbar .menu-item:last-child a {
+  display: flex;
+  height: 2rem;
+  /* width: ; */
+  visibility: hidden;
+  /* transition: all .5s ease; */
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.active .menu-item:last-child a {
+  visibility: visible;
+  width: calc(100% - 4rem);
+
+  /* justify-content: space-between; */
+
+  /* background-color: var(--bg-secondary); */
+}
+.navbar .menu-item:last-child .item-icon {
+  padding: 0;
+}
+.navbar .menu-item:last-child .item-text {
+  display: flex;
+  overflow: hidden;
+}
+.active .menu-item:last-child .item-text {
+  display: flex;
+  overflow: hidden;
+
+  /* background-color: var(--bg-secondary); */
+}
+
+
+
+main{
+  position: absolute;
+  width: calc(100% - 4rem);
+  height: calc(100vh - 4rem);
+  padding: 1rem 2rem;
+  /* z-index: 110; */
+}
+main h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

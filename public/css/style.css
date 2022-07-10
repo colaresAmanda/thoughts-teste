@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  /* border: 0; */
+  padding: 0;
+
+  list-style: none;
+  text-decoration: none;
+}
+:root {
+  --bg-primary: #313536;
+  --bg-secondary: #252829;
+
+  --text-primary: #f2f2f2;
+  --text-secondary: #abaeb0;
+
+  --color-brand-primary: #9172a6;
+  --color-brand-secondary: #9780a6;
+  --color-brand-tertiary: #b5a4bf;
+
+  --color-brand-highlight: #acdef2;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+
+  width: 100%;
+  height: 100vh;
+}
+
+/* Mobile */
+
+#nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+}
+
+.navbar {
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+  transition: .5s ease;
+  background-color: var(--bg-secondary);
+
+}
+.active{
+  opacity: 100;
+  width: 100%;
+  visibility: visible;
+
+}
+
+/* MOBILE */
+/* Nav header */
+
+.navbar-header li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-header{
+  padding: 0 2rem 0 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  background-color: var(--bg-primary);
+}
+
+.navbar-header li a,
+.navbar-main li a,
+.navbar-footer li a {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-header .brand-icon {
+  width: 3rem;
+}
+
+.navbar-header .brand-text {
+  padding-left: 2rem;
+
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Arrow Icon  */
+#nav #arrow-icon {
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    padding: 0 2rem;
+    cursor: pointer;
+    
+    z-index: 999;
+
+}
+.arrow {
+  border: solid #f2f2f2;
+  border-width: 0 0.25rem 0.25rem 0;
+  display: inline-block;
+  padding: 0.35rem;
+
+  
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.navbar-main{
+  padding: 0 2rem 0 2rem;
+
+}
+/* Nav main */
+.navbar-main li{
+    padding: 1rem 2rem;
+}
+.navbar-main li:hover {
+    background-color: var(--bg-primary);
+    border-radius: 1rem;
+    cursor: pointer;
+    /* padding: 2rem; */
+}
+
+.navbar-main .nav-main-icon {
+  font-size: 2rem;
+  color: var(--text-primary);
+}
+
+.navbar-main li a .nav-main-text{
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+
+.navbar-main li a .nav-main-text{
+  padding-left: 2rem;
+
+}
+
+.navbar-main li:last-child{
+    width: calc(100% - 8rem);
+
+    position: absolute;
+    bottom: 2rem;
+
+    border-top: 2px solid #313536;
+}
+
