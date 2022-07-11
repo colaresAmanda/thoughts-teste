@@ -50,27 +50,9 @@ body {
   z-index: 125;
   background-color: var(--bg-secondary);
 }
-/* 
-.arrow {
-  border: solid #f2f2f2;
-  border-width: 0 0.25rem 0.25rem 0;
-  display: inline-block;
-  padding: 0.35rem;
-}
-
-.right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-
-.left {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-} */
-
 #arrow-icon {
   margin: auto;
-  position: absolute;
+  position: fixed;
   top: .5rem;
 
   left: 1rem;
@@ -83,7 +65,7 @@ body {
   -webkit-box-shadow: 0px 0px 5px 3px #202324; 
   box-shadow: 0px 0px 5px 3px #202324;
   border-radius: .5rem;
-  padding: 1rem;
+  padding: .75rem;
 
   display: flex;
   align-items: center;
@@ -115,6 +97,8 @@ body {
 }
 
 .move-arrow #arrow-icon i{
+  /* position: fixed; */
+
   transform: rotate(-180deg);
   -webkit-transform: rotate(-180deg);
 }
@@ -153,7 +137,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
 
   border-radius: 1rem;
 
@@ -168,12 +152,13 @@ body {
 
 .navbar .menu-item .item-icon,
 .navbar .menu-item .item-text {
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: var(--text-primary);
 }
 
-.navbar .menu-item .item-icon {
-  padding-right: 1rem;
+.navbar .menu-item .item-text {
+  padding: 0 1rem;
+  /* margin: 0 1rem; */
 }
 
 .navbar .menu-item:last-child {
@@ -200,7 +185,7 @@ body {
 
 .navbar .menu-item:last-child a {
   display: flex;
-  height: 2rem;
+  /* height: rem; */
   /* width: ; */
   visibility: hidden;
   /* transition: all .5s ease; */
@@ -236,11 +221,30 @@ main{
   position: absolute;
   width: calc(100% - 4rem);
   height: calc(100vh - 4rem);
-  padding: 1rem 2rem;
+  /* padding: 1rem 2rem; */
   /* z-index: 110; */
 }
-main h1{
+main .header{
+  position: fixed;
+  width: 100%;
+  /* height: 3rem; */
+
+  padding: 1rem 0;
+  background-color: var(--bg-primary);
+  background-color: var(--bg-secondary);
+
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.header h1{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+main .content{
+  width: 100%;
+  margin-top: 3rem;
+  padding: 2rem;
+  text-align: justify;
 }
